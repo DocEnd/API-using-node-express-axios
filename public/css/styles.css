@@ -1,0 +1,102 @@
+/* colors:
+"000000" = rgb(0, 0, 0)
+"3D0000" = rgb(61, 0, 0)
+"950101" = rgb(149, 1, 1)
+"FF0000" = rgb(255, 0, 0)*/
+
+/* LINK CSS */
+/* unvisited link */
+a:link {
+    color: white;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: white;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: #FF0000;
+  }
+  
+  /* selected link */
+  a:active {
+    color: #950101;
+  }
+
+
+
+body { 
+    background-image: linear-gradient(
+    rgba(0, 0, 0, 0.8),  rgba(61, 0, 0, 0.8)),url("/images/wiskey.png");
+    /* background-repeat: no-repeat; */
+    background-size: contain;
+       
+}
+
+h1 {
+    color: #FF0000
+}
+
+.title-text {
+    border: solid #FF0000 1rem;
+    border-radius: 50%;
+    margin: 0% 3%;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.main-text {
+    color: aliceblue;
+    font-size: 2rem;
+    padding: 0% 3%;
+}
+
+.subtitle {
+    padding: 0% 3%;
+    color: #950101;
+    font-size: 3rem;
+}
+
+
+
+/* GRID CSS!!! */
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+
+  .one {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    }
+  
+  .two {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    text-align: center;
+    }
+  
+  .three {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    text-align: center;
+    }
+
+  .four {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    text-align: center;
+    }
+  
+  

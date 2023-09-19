@@ -1,0 +1,34 @@
+<%-include ("header.ejs") -%>
+
+<body>
+    <div class="title-text">
+    <h1> Last 10 Auctions for: <%= auctionInfo[0]["name"] %> </h1>
+    </div>
+    <div class="subtitle">
+        <div class="wrapper">
+            <h2 class="one" > Date </h2>
+            <h2 class="two" > Min Bid </h2>
+            <h2 class="three" > Max Bid </h2>
+            <h2 class="four" > Lots Count </h2>
+        </div>
+        <% if (auctionInfo.length <= 10) {%>
+            <% for (i=0; i<auctionInfo.length; i++) { %>
+                <div class="wrapper main-text">
+                    <p class="one" > <%= auctionInfo[i]["dt"]  %> </p>
+                    <p class="two"> <%= auctionInfo[i]["winning_bid_min"]  %> </p>
+                    <p class="three"> <%= auctionInfo[i]["winning_bid_max"]  %> </p>
+                    <p class="four"> <%= auctionInfo[i]["lots_count"]  %></p>
+                </div>
+        <% }}else{ %>
+            <% for (i=0; i <= 10; i++) { %>
+                <div class="wrapper main-text">
+                    <p class="one" > <%= auctionInfo[i]["dt"]  %> </p>
+                    <p class="two"> <%= auctionInfo[i]["winning_bid_min"]  %> </p>
+                    <p class="three"> <%= auctionInfo[i]["winning_bid_max"]  %> </p>
+                    <p class="four"> <%= auctionInfo[i]["lots_count"]  %></p>
+                </div>
+            <% }}%>
+            
+    </div>
+</body>
+</html>

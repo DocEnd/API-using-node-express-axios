@@ -1,0 +1,25 @@
+<%-include ("header.ejs") -%>
+
+<body>
+    <div class="title-text">
+    <h1> WHISKY INFORMER </h1>
+    </div>
+    <div class="subtitle">
+        <div class="wrapper">
+            <h2 class="one" > Distilary </h2>
+            <h2 class="two" > Slug </h2>
+            <h2 class="three" > Country </h2>
+            <h2 class="four" > Rating(%) </h2>
+        </div>
+        <% for (i=0; i<infoData.length; i++) { %>
+            <div class="wrapper main-text">
+            <p><a class="one" href="/auctions/<%=infoData[i]["slug"]%>"> <%= infoData[i]["name"]  %> </a></p>
+            <p class="two"> <%= infoData[i]["slug"]  %> </p>
+            <p class="three"> <%= infoData[i]["country"]  %> </p>
+            <p class="four"> <%= infoData[i]["whiskybase_rating"]  %>%</p>
+            </div>
+        <% } %>
+            
+    </div>
+</body>
+</html>
